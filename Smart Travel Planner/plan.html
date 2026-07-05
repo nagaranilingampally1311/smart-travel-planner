@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plan Trip • Smart Travel Planner</title>
+  <meta name="description" content="Create a smart travel plan with budgets and itineraries." />
+  <meta name="theme-color" content="#1e88e5" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' rx='48' fill='%231e88e5'/%3E%3Ctext x='128' y='148' font-size='112' text-anchor='middle'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Smart Travel Planner Home">
+        <span class="logo">✈️</span>
+        <span>Smart Travel Planner</span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+        <div id="primary-nav" class="nav-links">
+          <a href="index.html">Home</a>
+          <a class="active" href="plan.html">Plan Trip</a>
+          <a href="about.html">About</a>
+          <a href="support.html">Support</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Plan your trip</h1>
+        <p class="muted" style="margin-bottom:14px;">Fill in a few details and we’ll outline a simple itinerary and budget split.</p>
+
+        <form id="planner-form">
+          <div class="form-row">
+            <div class="field">
+              <label for="destination">Destination</label>
+              <input id="destination" name="destination" type="text" placeholder="e.g. Bali, Indonesia" required />
+            </div>
+            <div class="field">
+              <label for="start">Start date</label>
+              <input id="start" name="start" type="date" required />
+            </div>
+            <div class="field">
+              <label for="end">End date</label>
+              <input id="end" name="end" type="date" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="budget">Total budget (INR)</label>
+              <input id="budget" name="budget" type="number" min="0" step="500" placeholder="100000" required />
+            </div>
+            <div class="field">
+              <label>Interests</label>
+              <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); gap:8px;">
+                <label class="flex" style="gap:8px; align-items:center;"><input type="checkbox" name="interests" value="Adventure" /> Adventure</label>
+                <label class="flex" style="gap:8px; align-items:center;"><input type="checkbox" name="interests" value="Beaches" /> Beaches</label>
+                <label class="flex" style="gap:8px; align-items:center;"><input type="checkbox" name="interests" value="Mountains" /> Mountains</label>
+                <label class="flex" style="gap:8px; align-items:center;"><input type="checkbox" name="interests" value="City" /> City</label>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Generate Plan</button>
+        </form>
+
+        <section id="results" class="section hidden" aria-live="polite">
+          <h2 class="section-title">Your suggested plan</h2>
+          <div class="card-grid" id="summary-cards"></div>
+          <div class="card" id="itinerary-card" style="margin-top:16px;"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container inner">© <span id="year"></span> Smart Travel Planner</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

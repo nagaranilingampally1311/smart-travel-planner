@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • Smart Travel Planner</title>
+  <meta name="description" content="Learn about the Smart Travel Planner vision and team." />
+  <meta name="theme-color" content="#1e88e5" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' rx='48' fill='%231e88e5'/%3E%3Ctext x='128' y='148' font-size='112' text-anchor='middle'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Smart Travel Planner Home">
+        <span class="logo">✈️</span>
+        <span>Smart Travel Planner</span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+        <div id="primary-nav" class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="plan.html">Plan Trip</a>
+          <a class="active" href="about.html">About</a>
+          <a href="support.html">Support</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">About Smart Travel Planner</h1>
+        <p class="muted" style="margin-bottom:14px; max-width:70ch;">Smart Travel Planner helps travelers plan efficiently by simplifying itineraries, organizing budgets, and surfacing the right ideas at the right time—so you can spend less time planning and more time exploring.</p>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon">🎯</div>
+            <h3>Purpose</h3>
+            <p class="muted">Reduce planning friction with clear tools for dates, budgets, and day plans.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💡</div>
+            <h3>Approach</h3>
+            <p class="muted">Modern, mobile-first design with helpful defaults and smart suggestions.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🌍</div>
+            <h3>For Everyone</h3>
+            <p class="muted">From quick weekend getaways to multi-city adventures, we’ve got you covered.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="card">
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container inner">© <span id="year"></span> Smart Travel Planner</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

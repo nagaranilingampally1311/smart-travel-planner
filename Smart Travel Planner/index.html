@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Travel Planner</title>
+  <meta name="description" content="Plan smarter trips with responsive travel tools and inspiration." />
+  <meta name="theme-color" content="#1e88e5" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' rx='48' fill='%231e88e5'/%3E%3Ctext x='128' y='148' font-size='112' text-anchor='middle'%3E%E2%9C%88%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Smart Travel Planner Home">
+        <span class="logo">✈️</span>
+        <span>Smart Travel Planner</span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+        <div id="primary-nav" class="nav-links">
+          <a class="active" href="index.html">Home</a>
+          <a href="plan.html">Plan Trip</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Destinations</a>
+            <div class="dropdown-menu">
+              <a href="#features">Popular spots</a>
+              <a href="#gallery-title">Photo gallery</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Categories</a>
+            <div class="dropdown-menu">
+              <a href="plan.html">Adventure</a>
+              <a href="plan.html">Beaches</a>
+              <a href="plan.html">City breaks</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+          <a href="support.html">Support</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero fullscreen bg-cover" style="background-image:linear-gradient(rgba(9,30,66,0.45), rgba(9,30,66,0.45)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');">
+      <div class="container" style="text-align:center; color:#fff; padding: 80px 20px;">
+        <span class="tag" style="background: rgba(255,255,255,0.22); color:#fff;">Discover more</span>
+        <h1 style="margin:12px 0;">Design the perfect journey</h1>
+        <p class="muted" style="color:#e6f6ff; max-width:70ch; margin:0 auto 20px;">Effortless planning with smart suggestions, flexible budgets, and beautiful itineraries across devices.</p>
+        <div class="cta" style="justify-content:center;">
+          <a class="btn btn-primary" href="plan.html">Start Planning</a>
+          <a class="btn btn-outline" href="#features">Explore Features</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Everything you need to plan</h2>
+        <p class="muted" style="margin-bottom:14px;">From budgeting to day-by-day itineraries, we have you covered.</p>
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon">🗺️</div>
+            <h3>Smart Itineraries</h3>
+            <p class="muted">Build flexible day plans with attractions, food, and transit time.</p>
+          </article>
+          <article class="card">
+            <div class="icon">💸</div>
+            <h3>Budget Tracking</h3>
+            <p class="muted">Set a budget and see estimated costs by category and day.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🌤️</div>
+            <h3>Weather Aware</h3>
+            <p class="muted">Plan with seasonal insights so you pack for the right conditions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title" class="section-title">Inspiration gallery</h2>
+        <p class="muted" style="margin-bottom:14px;">Latest destinations, travel news, and partner offers.</p>
+        <div id="gallery-cards" class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="card" id="gallery-loading"><div class="icon">⏳</div><strong>Loading inspiration…</strong><p class="muted">Fetching travel ideas and offers.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container inner">© <span id="year"></span> Smart Travel Planner</div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script type="application/json" id="gallery-data">[
+    {
+      "type": "news",
+      "title": "Visa-free entry expands for summer",
+      "subtitle": "More countries open short-stay travel",
+      "image": "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=1200&auto=format&fit=crop",
+      "alt": "Traveler holding passport and boarding pass",
+      "url": "https://www.lonelyplanet.com/news"
+    },
+    {
+      "type": "ad",
+      "title": "Flight deals up to 40% off",
+      "subtitle": "Limited time partner offer",
+      "image": "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1200&auto=format&fit=crop",
+      "alt": "Airplane wing over clouds",
+      "url": "https://www.skyscanner.net/"
+    },
+    {
+      "type": "destination",
+      "title": "Hidden gems of Portugal",
+      "subtitle": "Coastal towns and vineyards",
+      "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop",
+      "alt": "Sunset over coastal village",
+      "url": "https://www.cntraveler.com/destinations/portugal"
+    }
+  ]</script>
+</body>
+</html>
+
